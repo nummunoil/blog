@@ -6,6 +6,22 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+const posts = {};
+//QUICK EXAMPLE
+posts ===
+  {
+    j123j42: {
+      id: "j123j42",
+      title: "post title",
+      comments: [{ id: "klj3kl", content: "content!" }],
+    },
+    j123j42: {
+      id: "j123j42",
+      title: "post title",
+      comments: [{ id: "klj3kl", content: "content!" }],
+    },
+  };
+
 app.get("/posts", (req, res) => {});
 
 app.post("/events", (req, res) => {});
