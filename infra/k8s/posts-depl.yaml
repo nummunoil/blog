@@ -19,11 +19,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: posts-custerip-srv
+  name: posts-clusterip-srv
 spec:
   selector:
     app: posts
-  type: ClusterIP
   ports:
     - name: posts
       protocol: TCP
