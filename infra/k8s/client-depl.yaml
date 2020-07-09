@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: stephengrider/client
+          image: nummunoil/test-client
 ---
 apiVersion: v1
 kind: Service
@@ -28,3 +28,16 @@ spec:
       protocol: TCP
       port: 3000
       targetPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-node-port
+spec:
+  type: NodePort
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 31515
+  selector:
+    app: client
